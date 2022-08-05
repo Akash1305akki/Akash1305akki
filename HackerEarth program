@@ -1,0 +1,26 @@
+N=int(input("Enter len of array : "))
+A=[];
+val=0;
+
+for i in range(0,N):
+    val=int(input("Enter value : "));
+    A.append(val);
+    
+m=A[0];
+n=0;
+
+for x in range(0,len(A)):
+    if(A[x]<m)&(A[x]>0):
+        m=A[x];
+
+for y in range(0,len(A)):
+    if(A[x]<0):
+        n=A[x];
+        
+n=abs(n);
+
+if(m<=n)|(n==0):
+    print("closest value to zero is ",m);
+else:
+    print("closest value for zero is ",-abs(n));
+        
